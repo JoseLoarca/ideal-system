@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="146.0" prefWidth="426.0" styleClass="background" stylesheets="@JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseloarca.controladores.ControladorLogin">
+   <children>
+      <Label layoutX="31.0" layoutY="27.0" text="Usuario" textFill="WHITE" />
+      <Label layoutX="31.0" layoutY="66.0" text="Contraseña" textFill="WHITE" />
+      <TextField fx:id="txtLogin" layoutX="139.0" layoutY="23.0" />
+      <PasswordField fx:id="txtContrasena" layoutX="139.0" layoutY="62.0" />
+      <ImageView fitHeight="103.0" fitWidth="121.0" layoutX="302.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/lock.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="156.0" layoutY="95.0" onMouseClicked="#cerrarPrograma" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/shutdown.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgLogin" fitHeight="33.0" fitWidth="41.0" layoutX="229.0" layoutY="95.0" onKeyPressed="#login" onMouseClicked="#login" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/checked.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="163.0" layoutY="136.0" onMouseClicked="#cerrarPrograma" strokeType="OUTSIDE" strokeWidth="0.0" text="Salir">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="233.0" layoutY="136.0" onMouseClicked="#cerrarPrograma" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

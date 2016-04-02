@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="479.0" styleClass="background" stylesheets="@JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseloarca.controladores.ControladorFactura">
+   <children>
+      <TableView fx:id="tblFacturas" layoutX="14.0" layoutY="322.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="451.0">
+        <columns>
+          <TableColumn fx:id="colIdFacturas" prefWidth="75.0" text="idFactura" />
+          <TableColumn fx:id="colNoFacturas" prefWidth="75.0" text="No. Factura" />
+            <TableColumn fx:id="colFecha" prefWidth="75.0" text="Fecha" />
+            <TableColumn fx:id="colDescripcion" prefWidth="75.0" text="Descripcion" />
+            <TableColumn fx:id="colTotal" prefWidth="75.0" text="Total" />
+            <TableColumn fx:id="colIdCliente" prefWidth="75.0" text="Cliente" />
+        </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="170.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FACTURAS">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="34.0" fitWidth="32.0" layoutX="255.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Bill-50.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="231.0" layoutY="522.0" onMouseClicked="#ventanaMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Return-100.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="228.0" layoutY="558.0" onMouseClicked="#ventanaMenu" strokeType="OUTSIDE" strokeWidth="0.0" text="Regresar">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtNoFactura" disable="true" layoutX="211.0" layoutY="79.0" prefHeight="29.0" prefWidth="158.0" />
+      <TextField fx:id="txtDescripcion" disable="true" layoutX="211.0" layoutY="151.0" prefHeight="29.0" prefWidth="158.0" />
+      <TextField fx:id="txtTotal" disable="true" layoutX="211.0" layoutY="188.0" prefHeight="29.0" prefWidth="158.0" />
+      <MenuBar layoutY="-4.0" prefHeight="0.0" prefWidth="479.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Mantenimiento">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+                  <MenuItem mnemonicParsing="false" onAction="#botonModificar" text="Editar" />
+                  <MenuItem mnemonicParsing="false" onAction="#eliminarRegistro" text="Eliminar" />
+                  <MenuItem mnemonicParsing="false" onAction="#reporte" text="Reporte" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Text fill="WHITE" layoutX="91.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No. Factura">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="91.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="90.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripcion">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="93.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="cmbIdCliente" disable="true" layoutX="211.0" layoutY="223.0" prefHeight="29.0" prefWidth="158.0" />
+      <Text fill="WHITE" layoutX="90.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliente">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="imgGuardar" disable="true" fitHeight="32.0" fitWidth="36.0" layoutX="231.0" layoutY="281.0" onMouseClicked="#guardar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/checked.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgCancelar" disable="true" fitHeight="32.0" fitWidth="36.0" layoutX="154.0" layoutY="281.0" onMouseClicked="#cancelar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Cancel-100.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="149.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cancelar">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="227.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guardar">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtFecha" disable="true" layoutX="211.0" layoutY="115.0" prefHeight="29.0" prefWidth="158.0" />
+      <ImageView fx:id="imgModificar" disable="true" fitHeight="32.0" fitWidth="42.0" layoutX="301.0" layoutY="281.0" onMouseClicked="#modificar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Rename-100.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="294.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modificar">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

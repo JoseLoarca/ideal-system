@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="781.0" styleClass="background" stylesheets="@JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseloarca.controladores.ControladorProducto">
+   <children>
+      <TableView fx:id="tblProducto" layoutX="16.0" layoutY="316.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="275.0" prefWidth="749.0">
+        <columns>
+          <TableColumn fx:id="colIdProducto" prefWidth="60.0" text="idProducto" />
+          <TableColumn fx:id="colNombre" prefWidth="71.0" text="Nombre" />
+            <TableColumn fx:id="colPrecio" prefWidth="90.0" text="P. Unitario" />
+            <TableColumn fx:id="colPrecioDocena" prefWidth="111.0" text="P. por Docena" />
+            <TableColumn fx:id="colPrecioMayor" prefWidth="108.0" text="P. por Mayor" />
+            <TableColumn fx:id="colDescripcion" prefWidth="96.0" text="Descripcion" />
+            <TableColumn fx:id="colEmpaque" prefWidth="75.0" text="Empaque" />
+            <TableColumn fx:id="colCategoria" prefWidth="75.0" text="Categoria" />
+            <TableColumn fx:id="colStock" prefWidth="75.0" text="Stock" />
+        </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="325.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRODUCTOS" underline="true">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <ImageView fitHeight="36.0" fitWidth="37.0" layoutX="372.0" layoutY="583.0" onMouseClicked="#ventanaMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Return-100.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="371.0" layoutY="623.0" onMouseClicked="#ventanaMenu" strokeType="OUTSIDE" strokeWidth="0.0" text="Regresar">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="42.0" fitWidth="39.0" layoutX="417.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/shopping_cart.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtNombre" disable="true" layoutX="222.0" layoutY="76.0" />
+      <TextField fx:id="txtDescripcion" disable="true" layoutX="222.0" layoutY="110.0" />
+      <ComboBox fx:id="cmbEmpaques" disable="true" layoutX="222.0" layoutY="144.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbCategorias" disable="true" layoutX="222.0" layoutY="183.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbStocks" disable="true" layoutX="222.0" layoutY="223.0" prefWidth="150.0" />
+      <Text fill="WHITE" layoutX="105.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="105.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripcion">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="105.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Empaque">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="105.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="105.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <MenuBar layoutY="-2.0" prefHeight="29.0" prefWidth="781.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Mantenimiento">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+                  <MenuItem mnemonicParsing="false" onAction="#modificar" text="Editar" />
+                  <MenuItem mnemonicParsing="false" onAction="#eliminarRegistro" text="Eliminar" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Text disable="true" fill="WHITE" layoutX="306.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cancelar">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text disable="true" fill="WHITE" layoutX="419.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guardar">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="imgCancelar" disable="true" fitHeight="39.0" fitWidth="36.0" layoutX="306.0" layoutY="265.0" onMouseClicked="#cancelar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Cancel-100.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgGuardar" disable="true" fitHeight="36.0" fitWidth="38.0" layoutX="418.0" layoutY="265.0" onMouseClicked="#guardar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/checked.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgModificar" disable="true" fitHeight="47.0" fitWidth="39.0" layoutX="518.0" layoutY="185.0" onMouseClicked="#modificarRegistro" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Rename-100.png" />
+         </image>
+      </ImageView>
+      <Text disable="true" fill="WHITE" layoutX="516.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modificar">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtPUnitario" disable="true" layoutX="516.0" layoutY="79.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="txtPMayor" disable="true" layoutX="516.0" layoutY="113.0" />
+      <TextField fx:id="txtPDocena" disable="true" layoutX="516.0" layoutY="148.0" />
+      <Text fill="WHITE" layoutX="414.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="P. Unitario">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="413.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="P. por Mayor">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="414.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="P. por Docena">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

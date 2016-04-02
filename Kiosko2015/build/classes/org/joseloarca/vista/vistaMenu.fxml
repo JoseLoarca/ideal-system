@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="381.0" prefWidth="575.0" styleClass="background" stylesheets="@JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseloarca.controladores.ControladorMenu">
+   <children>
+      <Button layoutX="67.0" layoutY="118.0" mnemonicParsing="false" onAction="#ventanaCategorias" prefHeight="72.0" prefWidth="123.0" text="Categorias">
+         <tooltip>
+            <Tooltip text="Vea, agregue, modifique categorias.">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Tooltip>
+         </tooltip></Button>
+      <Button layoutX="226.0" layoutY="118.0" mnemonicParsing="false" onAction="#ventanaClientes" prefHeight="72.0" prefWidth="123.0" text="Clientes">
+         <tooltip>
+            <Tooltip text="Vea, agregue, modifique clientes.">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Tooltip>
+         </tooltip></Button>
+      <Button layoutX="381.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#ventanaFacturas" prefHeight="72.0" prefWidth="123.0" text="Facturas">
+         <tooltip>
+            <Tooltip text="Vea, agregue, modifique facturas.">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Tooltip>
+         </tooltip></Button>
+      <Button layoutX="67.0" layoutY="232.0" mnemonicParsing="false" onAction="#ventanaProveedores" prefHeight="72.0" prefWidth="123.0" text="Proveedores">
+         <tooltip>
+            <Tooltip text="Vea, agregue, modifique proveedores.">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Tooltip>
+         </tooltip></Button>
+      <Button layoutX="226.0" layoutY="232.0" mnemonicParsing="false" onMouseClicked="#ventanaCompras" prefHeight="72.0" prefWidth="123.0" text="Compras">
+         <tooltip>
+            <Tooltip text="Vea, agregue, modifique compras.">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Tooltip>
+         </tooltip></Button>
+      <Button layoutX="381.0" layoutY="232.0" mnemonicParsing="false" onAction="#ventanaProductos" prefHeight="72.0" prefWidth="123.0" text="Productos">
+         <tooltip>
+            <Tooltip text="Vea, agregue, modifique productos.">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Tooltip>
+         </tooltip></Button>
+      <Text fill="WHITE" layoutX="203.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PUNTO VENTA 2015">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <ImageView fitHeight="28.0" fitWidth="33.0" layoutX="274.0" layoutY="322.0" onMouseClicked="#cerrarPrograma" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/shutdown.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="279.0" layoutY="361.0" onMouseClicked="#cerrarPrograma" strokeType="OUTSIDE" strokeWidth="0.0" text="Salir">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="48.0" fitWidth="52.0" layoutX="260.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/shop1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

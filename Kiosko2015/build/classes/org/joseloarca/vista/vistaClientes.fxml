@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="486.0" styleClass="background" stylesheets="@JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseloarca.controladores.ControladorCliente">
+   <children>
+      <TableView fx:id="tblClientes" layoutX="14.0" layoutY="299.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="198.0" prefWidth="459.0">
+        <columns>
+          <TableColumn fx:id="colIdCliente" prefWidth="75.0" text="idCliente" />
+          <TableColumn fx:id="colNit" prefWidth="75.0" text="NIT" />
+            <TableColumn fx:id="colDpi" prefWidth="145.0" text="DPI" />
+            <TableColumn fx:id="colNombre" prefWidth="164.0" text="Nombre" />
+        </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="188.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLIENTES">
+         <font>
+            <Font size="15.5" />
+         </font></Text>
+      <ImageView fitHeight="34.0" fitWidth="50.0" layoutX="227.0" layoutY="497.0" onMouseClicked="#ventanaMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Return-100.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="224.0" layoutY="535.0" onMouseClicked="#ventanaMenu" strokeType="OUTSIDE" strokeWidth="0.0" text="Regresar">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="34.0" fitWidth="49.0" layoutX="250.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Gender%20Neutral%20User-50.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtNit" disable="true" layoutX="188.0" layoutY="73.0" />
+      <TextField fx:id="txtDpi" disable="true" layoutX="188.0" layoutY="125.0" />
+      <TextField fx:id="txtNombre" disable="true" layoutX="188.0" layoutY="175.0" />
+      <Label layoutX="76.0" layoutY="83.0" text="NIT" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="135.0" text="DPI" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="185.0" text="Nombre" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgGuardar" disable="true" fitHeight="39.0" fitWidth="39.0" layoutX="221.0" layoutY="230.0" onMouseClicked="#guardar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/checked.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgCancelar" disable="true" fitHeight="39.0" fitWidth="39.0" layoutX="153.0" layoutY="230.0" onMouseClicked="#cancelar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Cancel-100.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="154.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cancelar">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="223.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guardar">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <MenuBar prefHeight="0.0" prefWidth="486.0" stylesheets="@JMetroDarkTheme.css">
+        <menus>
+          <Menu mnemonicParsing="false" text="Mantenimiento">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+                  <MenuItem mnemonicParsing="false" onAction="#botonModificar" text="Editar" />
+                  <MenuItem mnemonicParsing="false" onAction="#eliminarRegistro" text="Eliminar" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fx:id="imgModificar" fitHeight="34.0" fitWidth="39.0" layoutX="290.0" layoutY="233.0" onMouseClicked="#modificar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Rename-100.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="286.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modificar">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

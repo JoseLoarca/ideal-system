@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="426.0" styleClass="background" stylesheets="@JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseloarca.controladores.ControladorProveedor">
+   <children>
+      <TableView fx:id="tblProveedores" layoutX="16.0" layoutY="289.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="299.0" prefWidth="394.0">
+        <columns>
+          <TableColumn fx:id="colIdProveedor" prefWidth="75.0" text="idProveedor" />
+          <TableColumn fx:id="colNit" prefWidth="75.0" text="NIT" />
+            <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="colPaginaWeb" prefWidth="84.0" text="Pagina Web" />
+            <TableColumn fx:id="colContacto" prefWidth="85.0" text="Contacto" />
+        </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="126.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROVEEDORES">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="199.0" layoutY="588.0" onMouseClicked="#ventanaMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Return-100.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="196.0" layoutY="632.0" onMouseClicked="#ventanaMenu" strokeType="OUTSIDE" strokeWidth="0.0" text="Regresar">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="45.0" fitWidth="33.0" layoutX="239.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Delivery-50.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtNit" disable="true" layoutX="200.0" layoutY="84.0" />
+      <TextField fx:id="txtNombre" disable="true" layoutX="200.0" layoutY="126.0" />
+      <TextField fx:id="txtPaginaWeb" disable="true" layoutX="200.0" layoutY="168.0" />
+      <TextField fx:id="txtContacto" disable="true" layoutX="200.0" layoutY="209.0" />
+      <MenuBar layoutY="-4.0" prefHeight="0.0" prefWidth="426.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Mantenimiento">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+                  <MenuItem mnemonicParsing="false" onAction="#botonModificar" text="Editar" />
+                  <MenuItem mnemonicParsing="false" onAction="#eliminarRegistro" text="Eliminar" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Text fill="WHITE" layoutX="92.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIT">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="88.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="89.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pagina Web">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="90.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contacto">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="imgGuardar" disable="true" fitHeight="33.0" fitWidth="39.0" layoutX="194.0" layoutY="249.0" onMouseClicked="#guardar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/checked.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgCancelar" disable="true" fitHeight="33.0" fitWidth="33.0" layoutX="123.0" layoutY="249.0" onMouseClicked="#cancelar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Cancel-100.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="118.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cancelar">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="191.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guardar">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="33.0" fitWidth="56.0" layoutX="258.0" layoutY="249.0" onMouseClicked="#modificar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Rename-100.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="251.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modificar">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="544.0" styleClass="background" stylesheets="@JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseloarca.controladores.ControladorDetalleCompra">
+   <children>
+      <MenuBar prefHeight="38.0" prefWidth="544.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Mantenimiento">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Agregar Producto" />
+                  <MenuItem mnemonicParsing="false" text="Eliminar Producto" />
+                  <MenuItem mnemonicParsing="false" text="Modificar Producto" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Text fill="WHITE" layoutX="230.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Detalle Compras" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text disable="true" fill="WHITE" layoutX="120.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No. Compra">
+         <font>
+            <Font size="15.5" />
+         </font>
+      </Text>
+      <Text disable="true" fill="WHITE" layoutX="122.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha">
+         <font>
+            <Font size="15.5" />
+         </font>
+      </Text>
+      <Text disable="true" fill="WHITE" layoutX="122.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripcion">
+         <font>
+            <Font size="15.5" />
+         </font>
+      </Text>
+      <TextField fx:id="txtCompra" disable="true" layoutX="233.0" layoutY="75.0">
+         <font>
+            <Font size="15.5" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtFecha" disable="true" layoutX="233.0" layoutY="124.0">
+         <font>
+            <Font size="15.5" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtDescripcion" disable="true" layoutX="233.0" layoutY="172.0">
+         <font>
+            <Font size="15.5" />
+         </font>
+      </TextField>
+      <TableView fx:id="tblCompra" layoutX="26.0" layoutY="300.0" prefHeight="200.0" prefWidth="493.0">
+        <columns>
+          <TableColumn prefWidth="244.0" text="Descripcion" />
+            <TableColumn minWidth="0.0" prefWidth="244.0" text="Producto" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="imgAceptar" disable="true" fitHeight="38.0" fitWidth="38.0" layoutX="288.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Checked-32.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgCancelar" disable="true" fitHeight="38.0" fitWidth="42.0" layoutX="203.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Cancel-100.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgRegresar" fitHeight="38.0" fitWidth="49.0" layoutX="244.0" layoutY="492.0" onMouseClicked="#ventanaCompras" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Return-100.png" />
+         </image>
+      </ImageView>
+      <Text fill="#fcfcfc" layoutX="242.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regresar">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="288.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aceptar">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="201.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cancelar">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="126.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Productos">
+         <font>
+            <Font size="15.5" />
+         </font>
+      </Text>
+      <ComboBox fx:id="cmbProductos" disable="true" layoutX="232.0" layoutY="218.0" prefHeight="35.0" prefWidth="192.0" />
+   </children>
+</AnchorPane>

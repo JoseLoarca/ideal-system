@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="344.0" styleClass="background" stylesheets="@JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseloarca.controladores.ControladorCategoria">
+   <children>
+      <TableView fx:id="tblCategorias" layoutX="13.0" layoutY="180.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="271.0" prefWidth="319.0">
+        <columns>
+          <TableColumn fx:id="colIdCategoria" prefWidth="151.0" text="idCategoria" />
+          <TableColumn fx:id="colDescripcion" minWidth="0.0" prefWidth="169.0" text="Descripcion" />
+        </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="111.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CATEGORIAS">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <ImageView fitHeight="36.0" fitWidth="42.0" layoutX="153.0" layoutY="451.0" onMouseClicked="#ventanaMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Return-100.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="152.0" layoutY="491.0" onMouseClicked="#ventanaMenu" strokeType="OUTSIDE" strokeWidth="0.0" text="Regresar">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="202.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Box-50.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtDescripcion" disable="true" layoutX="130.0" layoutY="87.0" prefHeight="30.0" prefWidth="177.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextField>
+      <Text fill="WHITE" layoutX="38.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripcion">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <MenuBar prefHeight="0.0" prefWidth="344.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Mantenimiento">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+                  <MenuItem mnemonicParsing="false" onAction="#botonModificar" text="Editar" />
+                  <MenuItem mnemonicParsing="false" onAction="#eliminarRegistro" text="Eliminar" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fx:id="imgGuardar" disable="true" fitHeight="53.0" fitWidth="39.0" layoutX="159.0" layoutY="131.0" onMouseClicked="#guardar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/checked.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgCancelar" disable="true" fitHeight="39.0" fitWidth="89.0" layoutX="93.0" layoutY="131.0" onMouseClicked="#cancelar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Cancel-100.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="92.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cancelar">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="159.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guardar">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="imgModificar" disable="true" fitHeight="39.0" fitWidth="36.0" layoutX="226.0" layoutY="130.0" onMouseClicked="#modificar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/Rename-100.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="221.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modificar">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Kiosko2015.jnlp">
+  <information>
+    <title>Kiosko2015</title>
+    <vendor>informatica</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Kiosko2015.jar" size="123235" download="eager" />
+    <jar href="lib\commons-beanutils-1.8.2.jar" size="231891" download="eager" />
+    <jar href="lib\commons-collections-3.2.1.jar" size="575389" download="eager" />
+    <jar href="lib\commons-digester-2.1.jar" size="196768" download="eager" />
+    <jar href="lib\commons-javaflow-20060411.jar" size="96529" download="eager" />
+    <jar href="lib\commons-logging-1.1.jar" size="52592" download="eager" />
+    <jar href="lib\groovy-all-2.0.1.jar" size="6191960" download="eager" />
+    <jar href="lib\iText-2.1.7.js2.jar" size="1130575" download="eager" />
+    <jar href="lib\jasperreports-5.6.0.jar" size="4989676" download="eager" />
+    <jar href="lib\jasperreports-fonts-5.6.0.jar" size="2478093" download="eager" />
+    <jar href="lib\log4j-1.2.15.jar" size="391834" download="eager" />
+    <jar href="lib\sqljdbc4.jar" size="584207" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Kiosko2015" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="org.joseloarca.sistema.Principal"  name="Kiosko2015" />
+  <update check="always"/>
+</jnlp>
